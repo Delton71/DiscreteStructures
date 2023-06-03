@@ -1,0 +1,141 @@
+\documentclass[12pt,a4paper]{extreport}
+\usepackage[l2tabu,orthodox]{nag}
+
+% -----/ Lev Bunin usepackages /-----
+\usepackage{tikz}
+\usetikzlibrary{graphs, quotes}
+\usepackage{relsize}    % used in solution-460.tex
+\usepackage{ytableau}   % used in solution-461.tex
+% ----------
+
+% Пожалуйста, не меняйте указанные ниже установки полей в документе
+\usepackage[left=10mm,right=50mm, top=15mm,bottom=15mm,bindingoffset=0cm]{geometry}
+
+\usepackage{indentfirst}
+
+\usepackage[labelsep=period]{caption}
+
+\usepackage{amssymb,amsmath,amsthm}
+
+\usepackage{fontspec}
+
+\usepackage{float}
+
+\setmainfont[Ligatures=TeX]{STIX}
+\newfontfamily{\cyrillicfont}[Ligatures=TeX]{STIX}
+\setmonofont{Fira Mono}
+\newfontfamily{\cyrillicfonttt}{Fira Mono}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\graphicspath{{Fall/img/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,.75}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.7,0}
+
+\usepackage[normalem]{ulem}
+\setlength{\marginparwidth}{2cm}
+\usepackage[textwidth=4cm,textsize=tiny]{todonotes}
+\newcommand{\fix}[2]{{\textcolor{red}{\uwave{#1}}\todo[fancyline]{#2}}}
+\newcommand{\hl}[1]{{\textcolor{red}{#1}}}
+\newcommand{\cmd}[1]{{\ttfamily{\textbackslash #1}}}
+
+\newcommand{\vrb}[1]{\PVerb{#1}}
+\newcommand{\vrbb}[1]{\texttt{\textbackslash}\PVerb{#1}}
+\newcommand{\rules}{{\href{https://goo.gl/FhyJJm}{Правила}}}
+
+
+\usepackage[
+    draft = false,
+    unicode = true,
+    colorlinks = true,
+    allcolors = blue,
+    hyperfootnotes = true
+]{hyperref}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Утверждение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\newtheorem{notation}{Обозначение}
+\newtheorem{example}{Пример}
+
+\newcommand\tasklink[1]{\href{https://progensys.dainiak.com/problem-#1}{#1}}
+
+\newcounter{task}
+\newenvironment{task}[1]%
+{\setcounter{task}{#1}\addtocounter{task}{-1}\refstepcounter{task}%
+\par\noindent\textbf{\href{https://progensys.dainiak.com/problem-#1}{Задача~\thetask}. }}%
+{\smallskip}
+\newenvironment{solution}%
+{\par\noindent\textbf{Решение. }}%
+{\bigskip}
+    
+\newcommand\abs[1]
+{
+    \left\lvert #1 \right\rvert
+}
+
+\newcommand\ceil[1]
+{
+    \left\lceil{#1}\right\rceil
+}
+
+\newcommand\floor[1]
+{
+    \left\lfloor{#1}\right\rfloor
+}
+
+\newcommand{\divby}{\;\raisebox{-0.4ex}{\vdots}\;} 
+% команда \divby для символа делимости первого числа на второе
+
+\title{Решения задач по курсу «Дискретные структуры»}
+\author{Лев	Бунин}
+
+
+\begin{document}
+\maketitle
+
+% Таким образом нужно добавлять решения задач:
+% Каждое решение — в отдельном файле с названием “solution-N.tex”, где N — номер задачи, включающий буквенное обозначение пункта задачи, если таковое имеется.
+% Все картинки следует помещать в папку img/
+% Все незаконченные тексты решений можно помещать в папку drafts
+% В корневой папке должен быть только файл _main.tex и папки Fall и Spring (с файлами вида solution-N.tex внутри)
+
+
+% \input{Fall/solution-0}
+
+\input{Fall/solution-441}
+\newpage
+\input{Fall/solution-455}
+\input{Fall/solution-460}
+\input{Fall/solution-461}
+\input{Fall/solution-47}
+\input{Fall/solution-445}
+\newpage
+\input{Fall/solution-381}
+\newpage
+\input{Fall/solution-283}
+\input{Fall/solution-167}
+\input{Fall/solution-449}
+\newpage
+\input{Fall/solution-468}
+\newpage
+\input{Spring/solution-191}
+\input{Spring/solution-356}
+\input{Spring/solution-376}
+\input{Spring/solution-401}
+
+\end{document}

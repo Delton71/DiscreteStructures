@@ -1,0 +1,30 @@
+\begin{task}{449}
+Пусть дана произвольная группа \(\mathbb{G}\) порядка \(\lvert\mathbb{G}\rvert = p^k,\, p\in\mathbb{P}\), докажите, что в \(\mathbb{G}\) имеется ровно \(p^m\) элементов \(a_i\) (для некоторого целого \(m>0\)), для каждого из которых его класс сопряжённости удовлетворяют равенству \(\left\lvert a_i^{\mathbb{G}}\right\rvert = 1\). В процессе решения кроме прочего вам может потребоваться доказать, что такое множество элементов образует подгруппу в \(\mathbb{G}\), также не помешает одно из следствий \emph{теоремы Лагранжа}.
+\end{task}
+
+\begin{solution}
+
+\begin{enumerate}
+    \item Если \(\left\lvert a^{\mathbb{G}}\right\rvert = 1\), то \(\forall g \in \mathbb{G}\:gag^{-1}=a \Leftrightarrow ag=ga\). Значит, \(a \in Z(\mathbb{G})\), а нам нужно доказать, что \(\left\lvert Z(\mathbb{G})\right\rvert = p^m\).
+
+    \item Сопряжение~--- это отношение эквивалентности, разбивающее группу на непересекающиеся классы сопряженности, причем по теореме Лагранжа:
+    \begin{equation*}
+        \left\lvert a^{\mathbb{G}}\right\rvert = \frac{\left\lvert \mathbb{G}\right\rvert}{\left\lvert C_{\mathbb{G}}(a)\right\rvert},
+    \end{equation*}
+    другими словами, порядок класса сопряженности делит порядок группы.
+    
+    \item По прошлым пунктам мы можем утверждать, что:
+    \begin{equation*}
+        \left\lvert \mathbb{G}\right\rvert = \left\lvert Z(\mathbb{G})\right\rvert + \sum_i \left\lvert b_i^{\mathbb{G}}\right\rvert.
+    \end{equation*}
+
+    Сумма содержит не вошедшие в \(Z(\mathbb{G})\) элементы \(b_i\), то есть для каждого из них \(\left\lvert b_i^{\mathbb{G}}\right\rvert > 1\). А так как \(\lvert\mathbb{G}\rvert = p^k\) и порядок класса сопряженности делит порядок группы, получаем:
+    \begin{equation*}
+        \left\lvert \mathbb{G}\right\rvert = p^k = \left\lvert Z(\mathbb{G})\right\rvert + \sum_i p^{k_i}.
+    \end{equation*}
+
+    Получаем, что \(\left\lvert Z(\mathbb{G})\right\rvert\:\vdots\:p \Leftrightarrow \left\lvert Z(\mathbb{G})\right\rvert = p^m\), что и требовалось доказать.
+
+\end{enumerate}
+
+\end{solution}
